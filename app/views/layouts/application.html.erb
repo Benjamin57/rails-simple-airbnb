@@ -18,7 +18,10 @@
       <!-- Right Navigation -->
       <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-        <input type="text" class="form-control" placeholder="Search">
+        <%= form_tag(flats_path, method: :get) do %>
+          <%= text_field_tag :query, params[:query] %>
+          <%= submit_tag 'Search', class: "btn btn-success" %>
+        <% end %>
 
         <%= link_to "Add Flat", new_flat_path ,class: "btn btn-primary" %>
       </div>

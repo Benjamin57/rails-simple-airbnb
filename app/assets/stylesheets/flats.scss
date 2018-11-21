@@ -1,6 +1,23 @@
 // Place all the styles related to the flats controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.icon-style {
+  font-size: 30px;
+  padding-right: 7px;
+}
+
+
+.flex {
+  display:flex;
+}
+
+.flex-align {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .margin-top-negative {
   margin-top: -60px;
 }
