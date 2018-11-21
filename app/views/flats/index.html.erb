@@ -2,24 +2,25 @@
   <h1>Flats</h1>
   <div class="cards row">
     <% @flats.each do |flat| %>
-      <div class="card col-xs-12 col-md-4">
-        <div class="card-content">
-          <div class="card-image">
-
+      <div class="col-xs-12 col-md-4">
+        <div class="card-item">
+          <div class="card-content">
+            <div class="card-image" style="background-image: url(<%= flat.picture_url %>);">
+            </div>
+            <div class="card-title">
+              <h4><%= flat.name %></h4>
+              <p><%= flat.address %></p>
+              <ul class="list-inline">
+                <li><%= flat.price_per_night %> <i class="fas fa-euro-sign"></i></li>
+                <li><%= flat.number_of_guests %> <i class="fas fa-users"></i></li>
+              </ul>
+            </div>
           </div>
-          <div class="card-title">
-            <h4><%= flat.name %></h4>
-            <p><%= flat.address %></p>
-            <ul class="list-inline">
-              <li><%= flat.price_per_night %> <i class="fas fa-euro-sign"></i></li>
-              <li><%= flat.number_of_guests %> <i class="fas fa-users"></i></li>
-            </ul>
+          <div class="card-actions">
+            <%= link_to "More info", flat_path(flat), class: "text-primary" %>
+            <%= link_to "Edit flat", edit_flat_path(flat), class: "text-yellow" %>
+            <%= link_to "Remove flat", flat_path(flat), method: :delete, class: "text-red" %>
           </div>
-        </div>
-        <div class="card-actions">
-          <%= link_to "More info", flat_path(flat), class: "text-primary" %>
-          <%= link_to "Edit flat", edit_flat_path(flat), class: "text-yellow" %>
-          <%= link_to "Remove flat", flat_path(flat), method: :delete, class: "text-red" %>
         </div>
       </div>
     <% end %>

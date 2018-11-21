@@ -4,7 +4,7 @@
 <!--
 <div class="map">
 </div> -->
-<div class="container flex-container">
+<div class="container margin-top-negative">
   <div class="col-md-8">
     <div class="flat-show-card">
       <h2><%= @flat.name %></h2>
@@ -19,6 +19,17 @@
   <div class="col-md-4">
     <div class="flat-show-card">
       <h3>Book this place !</h3>
+      <form action="">
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">From:</span>
+          <input type="text" class="form-control" placeholder="12/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mt-2">
+          <span class="input-group-addon" id="basic-addon1">To:</span>
+          <input type="text" class="form-control" placeholder="18/10/2017" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <input type="submit" value="Book" class="btn btn-success mt-2" style="width: 100%">
+      </form>
     </div>
     <div class="flat-show-card">
       <h3>Details</h3>
